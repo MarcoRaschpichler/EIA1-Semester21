@@ -1,0 +1,104 @@
+body{
+    background-image: url("bg.png");
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+.portrait{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 20cm;
+}
+.header{
+    width: 600px;
+    height: 300px;
+    border-radius: 0 0 300px 300px;
+    background-color: seagreen;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titel{
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    margin-top: -220px;
+    margin-left: 600px;
+    margin-bottom: 120px;
+}
+.icon{
+width: 100px;
+height: 100px;
+margin-top: -150px;
+margin-left: 800px;
+margin-bottom: 200px;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    margin-left: 1200px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li{
+    float: right;
+}
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+li a:hover{
+background-color: silver;
+}
+.aktive{
+    background-color: green;
+}
+input{
+    background-color: silver;
+    display: block;
+    border: none;
+    width: auto;
+    margin-left: 381px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Vorname{
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Nachricht{
+    width: 250px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    margin-left: 381px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    margin-left: 381px;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
