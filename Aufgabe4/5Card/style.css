@@ -1,0 +1,33 @@
+body{
+    background-image: url(bg.png);
+}
+div{
+    display: block;
+}
+img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+h1 {
+    font-style: initial;
+    color: white;
+    font-family: initial;
+    position: absolute;
+    top: 26%;
+    right: 35%;
+    left: 35%;
+}
+iframe{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.band{
+    position: absolute;
+    left: 975px;
+    top: 540px;
+    z-index: 1;
+}

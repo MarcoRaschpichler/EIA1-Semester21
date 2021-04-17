@@ -1,0 +1,49 @@
+body{
+    background-image: url(bg.png);
+}
+div{
+    display: block;
+}
+img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+h1 {
+    font-style: initial;
+    color: white;
+    font-family: initial;
+    position: absolute;
+    top: 26%;
+    right: 35%;
+    left: 35%;
+}
+label{
+    cursor: default;
+}
+form {
+    font-style: initial;
+    color: white;
+    font-family: initial;
+    position: absolute;
+    top: 40%;
+    right: 35%;
+    left: 35%;
+}
+textarea{
+    width: 8cm;
+    height: 2cm;
+}
+input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+}
+input[type="last" i]{
+    width: 3cm;
+}

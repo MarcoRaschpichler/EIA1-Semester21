@@ -1,0 +1,49 @@
+body{
+    background-image: url(bg.png);
+}
+div{
+    display: block;
+}
+img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+h1 {
+    font-style: initial;
+    color: white;
+    font-family: initial;
+    position: absolute;
+    top: 26%;
+    right: 35%;
+    left: 35%;
+}
+.m1{
+    background-image: url(muschel.png);
+    position: absolute;
+    left: 600px;
+    top: 480px;
+    width: 70px;
+	height: 64px;
+}
+
+.m2{
+    background-image: url(muschel.png);
+    position: absolute;
+    left: 770px;
+    top: 400px;
+    width: 70px;
+	height: 64px;
+}
+.m3{
+    background-image: url(muschel.png);
+    position: absolute;
+    left: 950px;
+    top: 480px;
+    width: 70px;
+	height: 64px;
+}
+.m1:hover, .m2:hover, .m3:hover{
+   background-image: url(muschel_perle.png)
+}

@@ -1,0 +1,43 @@
+body{
+    background-image: url(bg1.png);
+}
+div {
+   position: absolute;
+   top: 50%;
+
+  }
+img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+h1 {
+    font-style: initial;
+    color: white;
+    font-family: initial;
+    position: absolute;
+    top: 26%;
+    right: 35%;
+    left: 35%;
+}
+h3{
+    font-style: initial;
+    color: white;
+    font-family: initial;
+    position: absolute;
+    top: 40%;
+    right: 35%;
+    left: 33%;
+}
+.Pengu{
+    position: absolute;
+    left: 1050px;
+    top: 500px;
+
+}
+.muschel{
+    position: absolute;
+    left: 570px;
+    top: 550px;
+}
