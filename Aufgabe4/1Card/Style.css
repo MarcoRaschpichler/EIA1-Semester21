@@ -17,7 +17,7 @@ h1 {
     color: white;
     font-family: initial;
     position: absolute;
-    top: 26%;
+    top: 29%;
     right: 35%;
     left: 35%;
 }
@@ -26,18 +26,18 @@ h3{
     color: white;
     font-family: initial;
     position: absolute;
-    top: 40%;
+    top: 41%;
     right: 35%;
     left: 33%;
 }
 .Pengu{
     position: absolute;
     left: 1050px;
-    top: 500px;
+    top: 550px;
 
 }
 .muschel{
     position: absolute;
     left: 570px;
-    top: 550px;
+    top: 600px;
 }
