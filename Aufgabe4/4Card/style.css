@@ -41,3 +41,7 @@ b{
     font-size: 15px;
     columns: 2;
 }
+#wrapper{
+    width: 400px;
+    margin: auto;
+}

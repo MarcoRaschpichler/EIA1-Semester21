@@ -22,8 +22,8 @@ h1 {
 .m1{
     background-image: url(muschel.png);
     position: absolute;
-    left: 600px;
-    top: 480px;
+    top: 50%;
+    left: 45%;
     width: 70px;
 	height: 64px;
 }
@@ -31,19 +31,23 @@ h1 {
 .m2{
     background-image: url(muschel.png);
     position: absolute;
-    left: 770px;
-    top: 400px;
+    left: 35%;
+    top: 60%;
     width: 70px;
 	height: 64px;
 }
 .m3{
     background-image: url(muschel.png);
     position: absolute;
-    left: 950px;
-    top: 480px;
+    left: 55%;
+    top: 60%;
     width: 70px;
 	height: 64px;
 }
 .m1:hover, .m2:hover, .m3:hover{
    background-image: url(muschel_perle.png)
+}
+#wrapper{
+    width: 400px;
+    margin: auto;
 }

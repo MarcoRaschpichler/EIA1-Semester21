@@ -47,3 +47,7 @@ input[type="radio" i] {
 input[type="last" i]{
     width: 3cm;
 }
+#wrapper{
+    width: 400px;
+    margin: auto;
+}
