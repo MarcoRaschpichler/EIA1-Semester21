@@ -11,37 +11,38 @@ img{
     transform: translate(-50%,-50%);
 }
 h1 {
-    font-style: initial;
+
     color: white;
-    font-family: initial;
-    position: absolute;
-    top: 29%;
-    right: 35%;
-    left: 35%;
+    font-size: 45px;
+    margin-top: -150px;
+
 }
-p{
-    font-style: initial;
+#erste{
+    width: 500px;
+    column-count: 3;
     color: white;
-    font-family: initial;
-    position: absolute;
-    top: 40%;
-    right: 35%;
-    left: 35%;
-    font-size: 15px;
-    columns: 3;
+    text-align: justify;
+    column-gap: 50px;
+    margin-top: 30px;
 }
-b{
-    font-style: initial;
+#zweite{
+    width: 500px;
+    column-count: 2;
     color: white;
-    font-family: initial;
-    position: absolute;
-    top: 60%;
-    right: 35%;
-    left: 35%;
-    font-size: 15px;
-    columns: 2;
+    text-align: justify;
+    column-gap: 50px;
+    margin-top: 250px;
 }
 #wrapper{
-    width: 400px;
-    margin: auto;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.uebertext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

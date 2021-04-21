@@ -10,20 +10,12 @@ img{
     left: 50%;
     transform: translate(-50%,-50%);
 }
-h1 {
-    font-style: initial;
-    color: white;
-    font-family: initial;
-    position: absolute;
-    top: 29%;
-    right: 35%;
-    left: 35%;
-}
 .m1{
     background-image: url(muschel.png);
     position: absolute;
-    top: 50%;
-    left: 45%;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 180px;
     width: 70px;
 	height: 64px;
 }
@@ -31,16 +23,16 @@ h1 {
 .m2{
     background-image: url(muschel.png);
     position: absolute;
-    left: 35%;
-    top: 60%;
+    margin-top: -10px;
+    margin-left: -45px;
     width: 70px;
 	height: 64px;
 }
 .m3{
     background-image: url(muschel.png);
     position: absolute;
-    left: 55%;
-    top: 60%;
+    margin-top: 50px;
+    margin-left: -250px;
     width: 70px;
 	height: 64px;
 }
@@ -48,6 +40,23 @@ h1 {
    background-image: url(muschel_perle.png)
 }
 #wrapper{
-    width: 400px;
-    margin: auto;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.uebertext {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.bild {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
