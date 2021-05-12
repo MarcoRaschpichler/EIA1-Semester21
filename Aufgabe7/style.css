@@ -1,79 +1,134 @@
-html{
-    height: 100%;
+body{    background-color: black;
 }
-body{
-    background: black;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+#drumpad {
+    height: 480px;
+    width: 480px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
-.drumpad{
-    display: flex;
-    width: 500px;
-    height: 650px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.drumbutton{
-    width: 150px;
+
+.button1 {
+    background-color: #2669e6;
     height: 150px;
-    border-radius: 5%;
-}
-.drumbutton:hover {
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 5px 5px 5px 5px;
     cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
 }
-#play-button{
-    opacity: 70%;
-}
-#play-button:hover {
+
+.button2 {
+    background-color: #2669e6;  
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 163px;
+    top: 0px;
+    border-radius: 5px 5px 5px 5px;
     cursor: pointer;
-    opacity: 100%;
+    border-style: outset;
+    border-width: 2px;
+
 }
-#drum1{
-    background-color:rgb(200, 20, 70) ;
+
+.button3 {
+    background-color: #2669e6;   
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
 }
-#drum1:hover{
-    background-color:rgb(200, 60, 70) ;
-}#drum2{
-    background-color:rgb(200, 20, 70) ;
+
+.button4 {
+    background-color:	#ff0281;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    top: 163px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
 }
-#drum2:hover{
-    background-color:rgb(200, 60, 70);
-}#drum3{
-    background-color:rgb(200, 20, 70) ;
+
+.button5 {
+    background-color:	#ff0281;   
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 163px;
+    top: 163px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
 }
-#drum3:hover{
-    background-color:rgb(200, 60, 70) ;
-}#drum4{
-    background-color:rgb(90, 140, 40) ;
+
+.button6 {
+    background-color:	#ff0281; 
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    right: 0px;
+    top: 163px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
 }
-#drum4:hover{
-    background-color:rgb(90, 140, 70) ;
-}#drum5{
-    background-color:rgb(90, 140, 40) ;
+
+.button7 {
+    background-color:	#ff0281;  
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
 }
-#drum5:hover{
-    background-color:rgb(90, 140, 70) ;
-}#drum6{
-    background-color:rgb(90, 140, 40) ;
+
+.button8 {
+    background-color:#ff8800;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 163px;
+    bottom: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
 }
-#drum6:hover{
-    background-color:rgb(90, 140, 70) ;
-}#drum7{
-    background-color:rgb(90, 140, 40) ;
+
+.button9 {
+    background-color:#ff8800;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
 }
-#drum7:hover{
-    background-color:rgb(90, 140, 70) ;
-}#drum8{
-    background-color:rgb(100, 20, 70) ;
-}
-#drum8:hover{
-    background-color:rgb(100, 20, 90);
-}#drum9{
-    background-color :rgb(100, 20, 70);
-}
-#drum9:hover{
-    background-color:rgb(100, 20, 90) ;
-}
+
+.playbutton {
+    display: flex; 
+    justify-content: center; 
+    cursor: pointer;
+    }
