@@ -1,0 +1,158 @@
+body{    background-color: black;
+}
+
+#drumpad {
+    height: 480px;
+    width: 480px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button1 {
+    background-color: #2669e6;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button2 {
+    background-color: #2669e6;  
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 163px;
+    top: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+
+}
+
+.button3 {
+    background-color: #2669e6;   
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button4 {
+    background-color:	#ff0281;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    top: 163px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button5 {
+    background-color:	#ff0281;   
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 163px;
+    top: 163px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button6 {
+    background-color:	#ff0281; 
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    right: 0px;
+    top: 163px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button7 {
+    background-color:	#ff0281;  
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button8 {
+    background-color:#ff8800;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 163px;
+    bottom: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button9 {
+    background-color:#ff8800;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.playButton {
+    text-align: center;
+    font-size: 70px;
+    color: yellow;
+    cursor: pointer;
+    }
+.stopButton{
+    text-align: center;
+    border-radius: 15px;
+    font-size: 70px;
+    color: yellow;
+    cursor: pointer;
+}
+.deleteButton{
+    text-align: center;
+    border-radius: 15px;
+    font-size: 70px;
+    color: yellow;
+    cursor: pointer;
+}
+.remixButton {
+    text-align: center;
+    font-size: 70px;
+    color: yellow;
+    cursor: pointer;
+    }
+.isHidden {
+    display: none !important;
+}
