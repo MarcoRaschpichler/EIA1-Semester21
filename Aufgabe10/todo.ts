@@ -17,7 +17,7 @@
     todosChecked: boolean;
 }
 
-let todoArray: todoItem[] = [
+ let todoArray: todoItem[] = [
 
     { 
     todosText: "Lorem",
@@ -44,16 +44,67 @@ let todoArray: todoItem[] = [
  * Variablen deklariert, die später die entsprechenden DOM-Elemente
  * speichern.
  */
-var inputDOMElement: HTMLInputElement;
-var addButtonDOMElement: HTMLElement;
-var todosDOMElement: HTMLElement;
-var counterDOMElement: HTMLElement;
+ var inputDOMElement: HTMLInputElement;
+ var addButtonDOMElement: HTMLElement;
+ var todosDOMElement: HTMLElement;
+ var counterDOMElement: HTMLElement;
+ var counterOpenDOMElement: HTMLElement;
+ var counterDoneDOMElement: HTMLElement;
+
+
+ declare var Artyom: any;
+
+ window.addEventListener("load", function(): void {
+    const artyom: any = new Artyom();
+
+    function startContinuousArtyom(): void {
+        artyom.fatality();
+    
+        setTimeout(
+            function(): void {
+                artyom.initialize({
+                    lang: "de-DE",
+                    continuous: true,
+                    listen: true,
+                    interimResults: true,
+                    debug: true
+                }).then(function(): void {
+                    console.log("Ready!");
+                });
+            }, 
+            250);
+    }
+    
+    startContinuousArtyom();
+
+    
+    artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function(i: any, wildcard: string): void {
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            todoArray.unshift ({
+                todosText: wildcard,
+                todosChecked: false
+            });
+            drawListToDOM();
+            artyom.say("Aufgabe" + wildcard + "wurde hinzugefügt");
+        }
+    });
+
+    document.querySelector("#spracheingabe").addEventListener("click", function(): void {
+    
+        startContinuousArtyom();
+        artyom.say("Welche Aufgabe willst du erstellen?");
+    });
+    
+} );
 
 /**
  * Sobald der DOM geladen wurde können grundlegende DOM-Interaktionen
  * initialisiert werden
  */
-window.addEventListener("load", function(): void {
+ window.addEventListener("load", function(): void {
 
     /**
      * Jetzt da der DOM verfügbar ist können die wichtigsten Elemente
@@ -64,6 +115,9 @@ window.addEventListener("load", function(): void {
     addButtonDOMElement = document.querySelector("#addButton");
     todosDOMElement = document.querySelector("#todos");
     counterDOMElement = document.querySelector("#counter");
+    counterOpenDOMElement = document.querySelector("#counterOpen");
+    counterDoneDOMElement = document.querySelector("#counterDone");
+
 
     /**
      * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener
@@ -78,7 +132,7 @@ window.addEventListener("load", function(): void {
     drawListToDOM();
 });
 
-function drawListToDOM(): void {
+ function drawListToDOM(): void {
     // alle todos erst einmal aus dem DOM löschen
     todosDOMElement.innerHTML = "";
 
@@ -123,16 +177,40 @@ function drawListToDOM(): void {
     }
 
     updateCounter();
+    updateCounterOpen();
+    updateCounterDone();
 }
 
-function updateCounter(): void {
+ function updateCounter(): void {
     counterDOMElement.innerHTML = todoArray.length + " in total";
 }
+
+ function updateCounterOpen(): void {
+    let counterOpen: number = 0;
+    for (let index: number = 0; index < todoArray.length; index++) {
+        if (todoArray[index].todosChecked == false)
+        counterOpen++;
+    }
+
+    counterOpenDOMElement.innerHTML = counterOpen + " open";
+}
+
+ function updateCounterDone(): void {
+    let counterDone: number = 0;
+    for (let index: number = 0; index < todoArray.length; index++) {
+        if (todoArray[index].todosChecked == true)
+        counterDone++;
+    }
+
+    counterDoneDOMElement.innerHTML = counterDone + " done";
+
+}
+
 
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:
  */
-function addTodo(): void {
+ function addTodo(): void {
     /**
      * Zunächst wird geprüft, ob das Input-Feld nicht leer ist
      * (ansonsten würde ein leerer ToDo-Text erstellt werden,
@@ -165,7 +243,7 @@ function addTodo(): void {
 /**
  * Der check- / unchecked Zustand eines ToDo wird wie folgt gesetzt:
  */
-function toggleCheckState(index: number): void {
+ function toggleCheckState(index: number): void {
 
     /**
      * Das Array, , das den Checked- / Uncheck-Status der ToDos abbildet,
@@ -192,7 +270,7 @@ function toggleCheckState(index: number): void {
 /**
  * Diese Funktion löscht ein ToDo
  */
-function deleteTodo(index: number): void {
+ function deleteTodo(index: number): void {
     /**
      * Durch "index" ist die entsprechende Stelle im Array
      * bekannt, an der das ToDo steht.

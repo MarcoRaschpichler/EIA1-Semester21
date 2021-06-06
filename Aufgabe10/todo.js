@@ -36,6 +36,43 @@ var inputDOMElement;
 var addButtonDOMElement;
 var todosDOMElement;
 var counterDOMElement;
+var counterOpenDOMElement;
+var counterDoneDOMElement;
+window.addEventListener("load", function () {
+    var artyom = new Artyom();
+    function startContinuousArtyom() {
+        artyom.fatality();
+        setTimeout(function () {
+            artyom.initialize({
+                lang: "de-DE",
+                continuous: true,
+                listen: true,
+                interimResults: true,
+                debug: true
+            }).then(function () {
+                console.log("Ready!");
+            });
+        }, 250);
+    }
+    startContinuousArtyom();
+    artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function (i, wildcard) {
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            todoArray.unshift({
+                todosText: wildcard,
+                todosChecked: false
+            });
+            drawListToDOM();
+            artyom.say("Aufgabe" + wildcard + "wurde hinzugefügt");
+        }
+    });
+    document.querySelector("#spracheingabe").addEventListener("click", function () {
+        startContinuousArtyom();
+        artyom.say("Welche Aufgabe willst du erstellen?");
+    });
+});
 /**
  * Sobald der DOM geladen wurde können grundlegende DOM-Interaktionen
  * initialisiert werden
@@ -50,6 +87,8 @@ window.addEventListener("load", function () {
     addButtonDOMElement = document.querySelector("#addButton");
     todosDOMElement = document.querySelector("#todos");
     counterDOMElement = document.querySelector("#counter");
+    counterOpenDOMElement = document.querySelector("#counterOpen");
+    counterDoneDOMElement = document.querySelector("#counterDone");
     /**
      * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener
      * auf den AddToDo Button gesetzt werden.
@@ -103,9 +142,27 @@ function drawListToDOM() {
         _loop_1(index);
     }
     updateCounter();
+    updateCounterOpen();
+    updateCounterDone();
 }
 function updateCounter() {
     counterDOMElement.innerHTML = todoArray.length + " in total";
+}
+function updateCounterOpen() {
+    var counterOpen = 0;
+    for (var index = 0; index < todoArray.length; index++) {
+        if (todoArray[index].todosChecked == false)
+            counterOpen++;
+    }
+    counterOpenDOMElement.innerHTML = counterOpen + " open";
+}
+function updateCounterDone() {
+    var counterDone = 0;
+    for (var index = 0; index < todoArray.length; index++) {
+        if (todoArray[index].todosChecked == true)
+            counterDone++;
+    }
+    counterDoneDOMElement.innerHTML = counterDone + " done";
 }
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:
